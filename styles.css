@@ -54,11 +54,22 @@ body {
     flex-direction: column;
     word-wrap: break-word;
     word-break: break-all;
-    padding: 20px;
+    height: 130px;
+    padding-right: 20px;
     background-color: #FDFFB6;
     border-radius: 15px;
     color: #A0C4FF;
     font-size: 40px;
+}
+
+.input {
+    font-size: 30px;
+    color: #b9d4ff;
+    padding-top: 10px;
+}
+
+.result {
+    padding-bottom: 10px;
 }
 
 button {
@@ -88,7 +99,7 @@ button:hover {
     color: #FFFFFC
 }
 
-[data-operand]:hover {
+[data-delete]:hover, [data-operand]:hover {
     background: #FF99C8;
     color: #FFFFFC
 }
