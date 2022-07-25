@@ -1,8 +1,95 @@
 body {
-	background: linear-gradient(-180deg,  #FFB4FF, #FFB4e7, #FFB4CF, #FFB4B7,  #FFB49F,
-     #FFB487, #ffB46F, #ffB457, #ffB43F, #FFB427);
-	background-size: 100% 100%;
+	background: linear-gradient(-45deg,  #FFB4FF, #FCF6BD);
+	background-size: 300% 300%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: #D0F4DE;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 95px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 120px);
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.span2 {
+    grid-column: span 2;
+    border-radius: 25px;
+}
+
+.span2:hover{
+    background: #A9DEF9;
+}
+
+.display    {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 20px;
+    background-color: #FDFFB6;
+    border-radius: 15px;
+    color: #A0C4FF;
+    font-size: 40px;
+}
+
+button {
+    background-color: white;
+    color: #A0C4FF;
+    border: none;
+    border-radius: 60px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 9px;
+    font-size: large;
+    font-weight: bolder;
+
+}
+
+button:hover {
+    transform: translateY(-0.4rem);
+    color: #FFFFFC
+
+}
+
+[data-number]:hover {
+    background: #E4C1F9;
+    color: #FFFFFC
+}
+
+[data-operand]:hover {
+    background: #FF99C8;
+    color: #FFFFFC
 }
 
