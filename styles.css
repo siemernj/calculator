@@ -62,13 +62,13 @@ body {
     font-size: 40px;
 }
 
-.input {
-    font-size: 30px;
-    color: #b9d4ff;
+.result {
+    font-size: 25px;
+    color: #cee1ff;
     padding-top: 10px;
 }
 
-.result {
+.input {
     padding-bottom: 10px;
 }
 
