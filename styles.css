@@ -94,12 +94,12 @@ button:hover {
 
 }
 
-[data-number]:hover {
+#decimal:hover, #number:hover {
     background: #E4C1F9;
     color: #FFFFFC
 }
 
-[data-delete]:hover, [data-operand]:hover {
+#delete:hover, #operand:hover, [data-operand]:hover {
     background: #FF99C8;
     color: #FFFFFC
 }
