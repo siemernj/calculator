@@ -80,3 +80,16 @@ function operations (a, b, operator) {
 }
 
 
+document.addEventListener('keydown', e => {
+    buttons.forEach((button) => {
+        if ((e.key === button.innerText)
+        || ((e.key === 'Enter') && (button.innerText === '='))
+        || ((e.key === 'Backspace') && (button.innerText === 'Del'))
+        || ((e.key === 'Escape') && (button.innerText === 'AC'))
+        || ((e.key === '*') && (button.innerText === '×'))
+        || ((e.key === '/') && (button.innerText === '÷'))) {
+                e.preventDefault();
+                button.click();
+        } 
+    });
+});5
