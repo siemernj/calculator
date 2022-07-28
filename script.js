@@ -3,19 +3,34 @@ const current = document.querySelector('.current');
 const previous = document.querySelector('.previous');
 let currentValue = 0;
 let previousValue = 0;
+let finalValue = null;
+let operator = null;
+
  
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if (button.id ==='number') {
+            finalValue = null;
             currentValue = Number(currentValue + button.innerText);
             current.innerText = currentValue;          
         }
         else if (button.id ==='operand') {
-            currentValue = 0;
-            operator = button.innerText
-            previousValue = operations(previousValue, currentValue, operator);
-            previous.innerText += current.innerText + `${button.innerText}`;
-            current.innerText = currentValue;
+            if ((operator !== null) && (curentValue === 0)) {
+                currentValue = 0;
+            } else if (operator === null) {
+                previousValue = currentValue + finalValue;
+                currentValue = 0;
+                operator = button.innerText
+                previous.innerText += current.innerText + `${button.innerText}`;
+                current.innerText = currentValue;
+
+            }else {
+                currentValue = 0;
+                operator = button.innerText
+                previousValue = operations(previousValue, currentValue, operator);
+                previous.innerText += current.innerText + `${button.innerText}`;
+                current.innerText = currentValue;
+            }
             
         }
         else if (button.id ==='allClear') {
@@ -33,9 +48,16 @@ buttons.forEach((button) => {
             current.innerText = currentValue;   
         }
         else if (button.id ==='equals') {
+            if (operator === null) {
+                currentValue;
+            } else {
             finalValue = operations(previousValue, currentValue, operator);
+            currentValue = 0;
+            previousValue = 0;
+            operator = null;
             current.innerText = finalValue;
             previous.innerText = null;
+            }
         }
     });
 })
